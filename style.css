@@ -72,6 +72,7 @@ body{
 .project:hover{
     transform: scale(1.01);
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .project *{
@@ -117,7 +118,8 @@ body{
     text-align: center;
     color: white;
     background-color: rgba(75, 126, 236, 0.428);
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     width: 100vw;
     margin: 0;
     box-shadow: 0 12px 40px rgba(44, 104, 233, 0.2), 0 6px 24px rgba(0, 0, 0, 0.08);
