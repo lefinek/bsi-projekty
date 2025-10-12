@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 253, 253);
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.header h1 {
+    text-align: center;
+    color: white;
+    background-color: rgba(75, 126, 236, 0.428);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80vw;
+    border-radius: 20px;
+    font-size: 40px;
+    box-shadow: 0 12px 40px rgba(44, 104, 233, 0.2), 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main h2 {
+    margin-top: 0;
+    text-align: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.projects {
+    display: grid;
+    justify-items: center;
+    row-gap: 20px;
+    grid-template-rows: auto;
+    max-height: 70vh;
+    min-height: fit-content;
+}
+
+.project {
+    background-color: white;
+    width: 77vw;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(44, 104, 233, 0.2), 0 6px 24px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: fit-content(5%) fit-content(35%) 1fr fit-content(20%);
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease-in-out;
+    will-change: transform;
+    transform-origin: center;
+}
+
+.project:hover{
+    transform: scale(1.01);
+    transition: transform 0.3s;
+}
+
+.project *{
+    margin: 0;
+    padding: 0;
+}
+
+.project span{
+    font-size: 25px;
+    color: rgba(75, 126, 236, 0.7);
+    justify-self: center;
+}
+
+.project h3{
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 25px;
+    justify-self: center
+}
+
+.project p{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    justify-self: center
+}
+
+.project a{
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+    text-decoration: none;
+    justify-self: center;
+}
+
+.project a:hover{
+    text-decoration: underline;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.footer h2{
+    text-align: center;
+    color: white;
+    background-color: rgba(75, 126, 236, 0.428);
+    padding: 10px;
+    width: 100vw;
+    margin: 0;
+    box-shadow: 0 12px 40px rgba(44, 104, 233, 0.2), 0 6px 24px rgba(0, 0, 0, 0.08);
+    font-weight: 200;
+    font-style: italic;
+    font-size: medium;
+}
+
+
+
+
+
