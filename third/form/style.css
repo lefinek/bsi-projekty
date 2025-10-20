@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 253, 253);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+}
+
+.exit {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+}
+
+.back svg {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    stroke-width: 2;
+    vertical-align: middle;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.back:hover {
+    cursor: pointer;
+    color: rgba(75, 126, 236, 1);
+}
+
+.exit:hover {
+    cursor: pointer;
+    color: rgba(75, 126, 236, 1);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: -webkit-fill-available;
+    /* min-width: fit-content; */
+    padding: 20px;
+    border: 1px solid rgba(75, 126, 236, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(75, 126, 236, 0.2);
+    background-color: white;
+}
+
+.div-data {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+}
+
+.personal-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.other-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+.data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.data label {
+    margin-bottom: 5px;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 14px;
+}
+
+.data-group {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.data-group label {
+    margin: 0;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 14px;
+}
+
+.data-dlicense {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.data-gender{
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.data-gender h2 {
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.data input, .data textarea {
+    padding: 8px;
+    border: 1px solid rgba(75, 126, 236, 0.7);
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.data textarea {
+    resize: vertical;
+    min-height: 60px;
+    max-height: 120px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(75, 126, 236, 0.7);
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+.about {
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+}
+
+h4 {
+    font: italic 18px Arial, Helvetica, sans-serif;
+    color: rgba(75, 126, 236, 0.7);
+    font-weight: 100;
+}
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    width: fit-content;
+    text-align: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 40px;
+}

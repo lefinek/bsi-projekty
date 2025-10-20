@@ -5,3 +5,7 @@ function helloWorld() {
 function TableAndForm() {
     window.open('second/index.html', '_blank');
 }
+
+function TableAndFormDiv() {
+    window.open('third/index.html', '_blank');
+}
