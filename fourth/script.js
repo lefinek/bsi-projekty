@@ -6,7 +6,7 @@ var m = null;
 function ifAbleToWriteSign() {
     let value = input.value;
     let lastChar = value.slice(-1);
-    if(lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "%" || lastChar == "") {
+    if(lastChar == "+" || lastChar == "-" || lastChar == "*" || lastChar == "/" || lastChar == "%" || lastChar == "" || lastChar == ".") {
         return false;
     } else {
         return true;
@@ -28,6 +28,12 @@ function ifOn() {
     } else {
         return false;
     }
+}
+
+function canInsertDot() {
+    const value = input.value || "";
+    const lastNumber = value.split(/[+\-*/%]/).pop();
+    return !lastNumber.includes(".");
 }
 
 buttons.forEach((elem, index) => {
@@ -89,6 +95,10 @@ buttons.forEach((elem, index) => {
             if (ifAbleToWriteSign()) {
                 input.value = input.value + "+";
             }
+        } else if (buttons[index].getAttribute("value") == "." && ifOn()) {
+            if (ifAbleToWriteSign() && canInsertDot()) {
+                input.value = input.value + ".";
+            }
         } else if (buttons[index].getAttribute("value") == "=" && ifOn()) {
             if (input.value == "") {
                 input.value = "";
@@ -96,7 +106,7 @@ buttons.forEach((elem, index) => {
                 try {
                     input.value = eval(input.value);
                 } catch (e) {
-                    input.value = "error";
+                    input.value = "syntax error";
                 }
             }
         } else if (input.getAttribute("class") == "screenON") {
