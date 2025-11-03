@@ -14,6 +14,6 @@ function Calc() {
     window.open('fourth/index.html', '_blank');
 }
 
-function XML() {
+function OpenXml() {
     window.open('fiveth/invoice.xml', '_blank');
 }
