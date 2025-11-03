@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="invoice.xsl"?>
+<faktura>
+  <numer_faktury>
+    2137/11/2025
+  </numer_faktury>
+  <data_wystawienia>
+    17.11.2025
+  </data_wystawienia>
+  <miejsce_wystawienia>
+    Warszawa
+  </miejsce_wystawienia>
+  <termin_platnosci>
+    01.12.2025
+  </termin_platnosci>
+  <forma_platnosci>
+    Gotówka
+  </forma_platnosci>
+  <data_wykonania>
+    17.11.2025
+  </data_wykonania>
+  <uwagi>
+    Miłego dnia!
+  </uwagi>
+  <wystawiajacy>
+    Jakub Strzelczak
+  </wystawiajacy>
+  <sprzedawca>
+    <nazwa>
+      Sprzedawca Sp. z o.o.
+    </nazwa>
+    <adres>
+      ul. Ulica 10, 00-001 Warszawa
+    </adres>
+    <NIP>
+      123-456-32-18
+    </NIP>
+  </sprzedawca>
+  <nabywca>
+    <nazwa>
+      Nabywca Sp. z o.o.
+    </nazwa>
+    <adres>
+      ul. Inna Ulica 20, 00-002 Warszawa
+    </adres>
+    <NIP>
+      987-654-32-18
+    </NIP>
+  </nabywca>
+  <konto>
+    <nazwa_banku>
+      Bank
+    </nazwa_banku>
+    <numer_konta>
+    12 3456 7890 1234 5678 9012 3456
+  </numer_konta>
+  </konto>
+  <uslugi>
+    <usluga>
+      <nazwa>
+        Wykonanie projektu BSI
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        5000.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        6150.00
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+        Promocja strony internetowej
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        2000.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        2460.00
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+        Hostowanie strony internetowej
+      </nazwa>
+      <ilosc>
+        1
+      </ilosc>
+      <cena_jednostkowa>
+        1000.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        23%
+      </stawka_VAT>
+      <wartosc>
+        1230.00
+      </wartosc>
+    </usluga>
+    <usluga>
+      <nazwa>
+        Analiza SEO
+      </nazwa>
+      <ilosc>
+        5
+      </ilosc>
+      <cena_jednostkowa>
+        500.00
+      </cena_jednostkowa>
+      <stawka_VAT>
+        8%
+      </stawka_VAT>
+      <wartosc>
+        2700.00
+      </wartosc>
+    </usluga>
+  </uslugi>
+</faktura>

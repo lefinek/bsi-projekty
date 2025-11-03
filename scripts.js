@@ -13,3 +13,7 @@ function TableAndFormDiv() {
 function Calc() {
     window.open('fourth/index.html', '_blank');
 }
+
+function XML() {
+    window.open('fiveth/invoice.xml', '_blank');
+}
