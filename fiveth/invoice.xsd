@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+  <xs:element name="faktura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="numer_faktury" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="miejsce_wystawienia" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="data_wystawienia" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="termin_platnosci" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="forma_platnosci" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="data_wykonania" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="sprzedawca" type="kontrahentType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="nabywca" type="kontrahentType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="konto" type="kontoType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="uslugi" type="uslugiType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="uwagi" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="wystawiajacy" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="kontrahentType">
+    <xs:sequence>
+      <xs:element name="nazwa" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="adres" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="NIP" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="kontoType">
+    <xs:sequence>
+      <xs:element name="nazwa_banku" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="numer_konta" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+
+  <xs:complexType name="uslugiType">
+    <xs:sequence>
+      <xs:element name="usluga" type="uslugaType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+
+  <xs:complexType name="uslugaType">
+    <xs:sequence>
+      <xs:element name="nazwa" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="ilosc" type="xs:integer" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="cena_jednostkowa" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="stawka_VAT" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="wartosc" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>
