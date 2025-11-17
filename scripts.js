@@ -17,3 +17,7 @@ function Calc() {
 function OpenXml() {
     window.open('fiveth/invoice.xml', '_blank');
 }
+
+function OpenForm() {
+    window.open('second/form/index.html', '_blank');
+}
