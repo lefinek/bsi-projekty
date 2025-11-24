@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(253, 253, 253);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+}
+
+.back svg {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    stroke-width: 2;
+    vertical-align: middle;
+}
+
+.back:hover {
+    cursor: pointer;
+    color: rgba(75, 126, 236, 1);
+}
+
+.about {
+    padding-top: 20px;
+    text-align: center;
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 18px;
+}
+
+h4 {
+    font: italic 18px Arial, Helvetica, sans-serif;
+    color: rgba(75, 126, 236, 0.7);
+    font-weight: 100;
+}
+
+.hero {
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1{
+    color: rgba(75, 126, 236, 0.7);
+    font-size: 36px;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.table{
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.column-name{
+    background-color: rgba(75, 126, 236, 0.2);
+    color: rgba(75, 126, 236, 0.9);
+    font-weight: bold;
+    padding: 0;
+    border: 1px solid rgba(75, 126, 236, 0.4);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.column-name .column-item{
+    padding: 10px 5px;
+    text-align: center;
+    flex: 1;
+    border-right: 1px solid rgba(75, 126, 236, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-item:last-child{
+    border-right: none;
+}
+
+.table-content{
+    padding: 0;
+    border: 1px solid rgba(75, 126, 236, 0.4);
+    border-top: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-content .row{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(75, 126, 236, 0.2);
+}
+
+.table-content .row:last-child{
+    border-bottom: none;
+}
+
+.row .row-item{
+    padding: 10px 5px;
+    word-break: break-word;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.row .row-item-input{
+    padding: 10px 5px;
+    word-break: break-word;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.row-item input,
+.row-item select,
+.row-item-input input,
+.row-item-input select{
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid rgba(75, 126, 236, 0.4);
+    border-radius: 2px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.add-button,
+.edit-button,
+.delete-button{
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-button{
+    background-color: rgba(75, 126, 236, 0.8);
+    color: white;
+    width: 100%;
+}
+
+.add-button:hover{
+    background-color: rgba(75, 126, 236, 1);
+}
+
+.edit-button{
+    background-color: rgba(73, 200, 41, 0.8);
+    color: white;
+    margin-right: 5px;
+    display: none;
+}
+
+.edit-button:hover{
+    background-color: rgba(73, 200, 41, 1);
+    cursor: pointer;
+}
+
+.delete-button{
+    background-color: rgba(236, 75, 75, 0.8);
+    color: white;
+}
+
+.delete-button:hover{
+    background-color: rgba(236, 75, 75, 1);
+}
+
+.select-edit-button{
+    background-color: rgba(75, 126, 236, 0.8);
+    color: white;
+    margin-right: 5px;
+}
+.select-edit-button:hover{
+    background-color: rgba(75, 126, 236, 1);
+    cursor: pointer;
+}
+
+.abort-edit-button{
+    background-color: rgba(211, 200, 41, 0.8);
+    color: white;
+    margin-right: 5px;
+    display: none;
+}
+.abort-edit-button:hover{
+    background-color: rgb(211, 200, 41);
+    cursor: pointer;
+}
+
+.edit-buttons{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.no-data {
+    font-size: 18px;
+    color: rgba(200, 50, 50, 0.8);
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(75, 126, 236, 0.4);
+}
+
+.hidden{
+    display: none;
+}

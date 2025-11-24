@@ -21,3 +21,7 @@ function OpenXml() {
 function OpenForm() {
     window.open('second/form/index.html', '_blank');
 }
+
+function OpenDataBaseWrap() {
+    window.open('seventh/index.php', '_blank');
+}

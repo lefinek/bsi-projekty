@@ -138,7 +138,7 @@
             <div class="about">
                 <h2>Jakub Strzelczak</h2>
                 <p>Numer albumu: 227684</p>
-                <h4>październik 2025</h4>
+                <h4>listopad 2025</h4>
             </div>
         </div>
     </div>
