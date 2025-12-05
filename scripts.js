@@ -25,3 +25,7 @@ function OpenForm() {
 function OpenDataBaseWrap() {
     window.open('seventh/index.php', '_blank');
 }
+
+function OpenSession() {
+    window.open('eight/login.php', '_blank');
+}

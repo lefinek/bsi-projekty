@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body onload="diplayErrorMessage()">
+    <div class="container">
+        <div class="back">
+            <p>Powrót</p>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#4b7eec" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+        </div>
+        <div class="main">
+            <form action="addUser.php" method="POST">
+                <div class="form-group">
+                    <div class="hero">
+                        <h1>Zarejestruj się</h1>
+                    </div>
+                    <div class="inputs">
+                        <div class="input">
+                            <input type="text" name="fname" id="fname" placeholder="Imię" required>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="lname" id="lname" placeholder="Nazwisko" required>
+                        </div>
+                        <div class="input">
+                            <select name="gender" id="gender" required>
+                                <option value="" disabled selected>Wybierz płeć</option>
+                                <option value="Mężczyzna">Mężczyzna</option>
+                                <option value="Kobieta">Kobieta</option>
+                                <option value="Inna">Inna</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <select name="preferences" id="preferences" required>
+                                <option value="" disabled selected>Wybierz system operacyjny</option>
+                                <option value="Windows">Windows</option>
+                                <option value="Linux">Linux</option>
+                                <option value="MacOS">MacOS</option>
+                            </select>
+                        </div>
+                        <div class="input">
+                            <input type="text" name="username" id="username" placeholder="Nazwa użytkownika" required>
+                        </div>
+                        <div class="input">
+                            <input type="password" name="password" id="password" placeholder="Hasło" required>
+                        </div>
+                        <div class="input">
+                            <input type="password" name="confirm_password" id="confirm_password" placeholder="Potwierdź hasło" required>
+                            <p class="password-hint">co najmniej <span class="small_letter">jedna mała litera</span>, <span class="two_capital_letters">dokładnie 2 duże litery</span>, <span class="contains_7">7</span>, <span class="contains_exclamation">!</span>, <span class="contains_hash">#</span>, <span class="contains_space">spacja</span>, <span class="minlength_9">minimum 9 znaków</span></p>
+                            <p class="hidden password-error">Hasła nie są identyczne!</p>
+                            <p class="hidden error"></p>
+                        </div>
+                    </div>
+                    <div class="register">
+                        <p>Masz już konto? <a href="login.php">Zaloguj się tutaj!</a></p>
+                    </div>
+                    <input type="submit" value="Zarejestruj się" class="submit-button">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
