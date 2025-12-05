@@ -30,8 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: panel.php");
             exit();
         } else {
-            header("Location: login.php?error=3");
-            exit();
+            echo $input_hash;
+            echo '<br>';
+            echo $stored_hash;
+            // header("Location: login.php?error=3");
+            // exit();
         }
     } else {
         header("Location: login.php?error=4");
