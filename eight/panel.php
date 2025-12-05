@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['logged_in'] !== true) {
-    header("Location: login.html?error=6");
+    header("Location: login.php?error=6");
     exit();
 }
 ?>

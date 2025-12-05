@@ -44,8 +44,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $minLength = strlen($password) >= 9;
 
     if (!$smallLetter || !$twoCapitalLetters || !$contains7 || !$containsExclamation || !$containsHash || $containsSpace || !$minLength) {
-        header("Location: register.html?error=4");
-        exit();
+        // header("Location: register.html?error=4");
+        // exit();
+        echo $smallLetter;
+        echo '<br>';
+        echo $twoCapitalLetters;
+        echo '<br>';
+        echo $contains7;
+        echo '<br>';
+        echo $containsExclamation;
+        echo '<br>';
+        echo $containsHash;
+        echo '<br>';
+        echo $containsSpace;
+        echo '<br>';
+        echo $minLength;
+        echo '<br>';
     }
 
     $stmt = $conn->prepare("INSERT into user (name, last_name, salt, password_hash, login, gender, preference) VALUES (:name, :lastname, :salt, :password_hash, :username, :gender, :preferences)");

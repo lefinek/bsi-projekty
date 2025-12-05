@@ -14,7 +14,7 @@ if (backToStartButton) {
 }
 
 function back() {
-    window.location.href = 'login.html';
+    window.location.href = 'login.php';
 }
 
 function backToStart() {
