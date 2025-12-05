@@ -47,7 +47,7 @@ if ($_SESSION['logged_in'] !== true) {
                     <p><strong>Płeć:</strong> <?php echo $gender ?></p>
                     <p><strong>Preferencje:</strong> <?php echo $preferences; ?></p>
                     <p><strong>Login:</strong> <?php echo ($user['login']); ?></p>
-                    <!-- <p><strong>Sól haszowania hasła:</strong> ></p> -->
+                    <p><strong>Hash hasła:</strong> <?php echo ($user['password_hash']); ?></p>
                 </div>
                 <div class="logout">
                     <input type="submit" class="logout-button" value="Wyloguj się" onclick="location.href='logout.php'">
