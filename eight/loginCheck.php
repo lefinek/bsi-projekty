@@ -14,15 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $salt = $user['salt'];
         $stored_hash = $user['password_hash'];
 
-        $bcrypt_salt = substr($salt, 0, 22);
-        $options = [
-            'cost' => 12,
-            'salt' => $bcrypt_salt,
-        ];
+        // $bcrypt_salt = substr($salt, 0, 22);
+        // $options = [
+        //     'cost' => 12,
+        //     'salt' => $bcrypt_salt,
+        // ];
+        //$input_hash = password_hash($password, PASSWORD_BCRYPT, $options);
 
-        $input_hash = password_hash($password, PASSWORD_BCRYPT, $options);
-
-        if ($input_hash === $stored_hash) {
+        if (password_verify($password, $stored_hash)) {
             session_start();
             $_SESSION['user_id'] = $username;
             $_SESSION['logged_in'] = true;
@@ -30,11 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: panel.php");
             exit();
         } else {
-            echo $input_hash;
-            echo '<br>';
-            echo $stored_hash;
-            // header("Location: login.php?error=3");
-            // exit();
+            header("Location: login.php?error=3");
+            exit();
         }
     } else {
         header("Location: login.php?error=4");

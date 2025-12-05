@@ -9,14 +9,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $number = random_bytes(16);
+    // $number = random_bytes(16);
     $salt = base64_encode($number);
-    $bcrypt_salt = substr($salt, 0, 22);
-    $options = [
-        'cost' => 12,
-        'salt' => $bcrypt_salt,
-    ];
-    $password_hash = password_hash($password, PASSWORD_BCRYPT, $options);
+    // $bcrypt_salt = substr($salt, 0, 22);
+    // $options = [
+    //     'cost' => 12,
+    //     'salt' => $bcrypt_salt,
+    // ];
+    // $password_hash = password_hash($password, PASSWORD_BCRYPT, $options);
+
+    $password_hash = password_hash($password, PASSWORD_BCRYPT);
 
     $chck = $conn->prepare("SELECT COUNT(*) FROM user WHERE login = :username");
     $chck->bindParam(':username', $username);
