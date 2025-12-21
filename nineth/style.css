@@ -20,8 +20,7 @@ body {
     overflow-y: auto;
 }
 
-.back,
-.back-to-start {
+.back {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,13 +34,17 @@ body {
     font-size: 18px;
 }
 
-.back svg,
-.back-to-start svg {
+.back svg {
     width: 22px;
     height: 22px;
     display: inline-block;
     stroke-width: 2;
     vertical-align: middle;
+}
+
+.back:hover {
+    cursor: pointer;
+    color: rgba(75, 126, 236, 1);
 }
 
 .main {
@@ -179,8 +182,4 @@ h4 {
     text-align: center;
     color: rgba(75, 126, 236, 0.7);
     font-size: 40px;
-}
-
-.hidden {
-    display: none;
 }
