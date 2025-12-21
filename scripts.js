@@ -29,3 +29,7 @@ function OpenDataBaseWrap() {
 function OpenSession() {
     window.open('eight/login.php', '_blank');
 }
+
+function OpenCrawler() {
+    window.open('nineth/index.php', '_blank');
+}
