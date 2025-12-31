@@ -66,7 +66,7 @@ function clearDataFile() {
 }
 
 function fetchHowManyPages(url) {
-    return fetch('getData.php?url=' + encodeURIComponent(url))
+    return fetch('getData_alternative.php?url=' + encodeURIComponent(url))
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -93,6 +93,7 @@ function fetchHowManyPages(url) {
                 }
             });
             
+            console.log('Last page detected:', lastPage);
             return lastPage > 0 ? lastPage : 1;
         })
         .catch(error => {
@@ -129,7 +130,7 @@ function fetchSGGWEventsData(url, lastPage) {
         for (let page = 1; page <= lastPage; page++) {
             let pagedUrl = url + '/page/' + page + '/';
             
-            const pagePromise = fetch('getData.php?url=' + encodeURIComponent(pagedUrl))
+            const pagePromise = fetch('getData_alternative.php?url=' + encodeURIComponent(pagedUrl))
                 .then(response => response.text())
                 .then(data => {
                     const parser = new DOMParser();
