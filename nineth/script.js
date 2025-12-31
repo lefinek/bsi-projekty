@@ -123,8 +123,8 @@ function writeDataToFile(data) {
 function fetchSGGWEventsData(url, lastPage) {
     if (lastPage < 1) {
         console.error('Invalid number of pages to fetch:', lastPage);
-        lastPage = 93;
     }
+    lastPage = 93;
     console.log('Fetching data for', lastPage, 'pages.');
 
     clearDataFile().then(() => {
