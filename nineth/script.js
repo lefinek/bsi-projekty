@@ -67,22 +67,38 @@ function clearDataFile() {
 
 function fetchHowManyPages(url) {
     return fetch('getData.php?url=' + encodeURIComponent(url))
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(data => {
+            
             const parser = new DOMParser();
             const html = parser.parseFromString(data, 'text/html');
+            const parserError = html.querySelector('parsererror');
+            if (parserError) {
+                console.error('Parser error:', parserError.textContent);
+            }
 
             var paginationElement = html.querySelectorAll('.pagination a');
+            
             var lastPage = 0;
 
             paginationElement.forEach((element) => {
                 var pageNumber = parseInt(element.textContent.trim());
-                if (pageNumber > lastPage) {
+                if (!isNaN(pageNumber) && pageNumber > lastPage) {
                     lastPage = pageNumber;
                 }
             });
-            return lastPage;
+            
+            return lastPage > 0 ? lastPage : 1;
         })
+        .catch(error => {
+            console.error('Error in fetchHowManyPages:', error);
+            return 1;
+        });
 }
 
 function writeDataToFile(data) {
